@@ -1,4 +1,5 @@
 import MenuMobileController from './interface/MenuMobileController.js';
+import renderSections from './main.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   new MenuMobileController({
@@ -6,4 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     openButtonId: 'menu-hamburguer',
     closeButtonId: 'menu-fechar',
   });
+  
+  renderSections();
 });
