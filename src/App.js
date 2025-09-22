@@ -1,8 +1,9 @@
-import MenuMobileController from './src/interface/MenuMobileController.js';
+import MenuMobileController from './interface/MenuMobileController.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   new MenuMobileController({
-    menuId: 'menuMobile',
-    botaoId: 'botaoMenu'
+    menuId: 'menu',
+    openButtonId: 'menu-hamburguer',
+    closeButtonId: 'menu-fechar',
   });
 });

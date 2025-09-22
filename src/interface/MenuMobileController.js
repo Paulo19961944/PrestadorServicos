@@ -1,17 +1,22 @@
-import criarMenuMobile from '../application/MenuMobileFactory.js';
+import criarMenuMobile from '../application/MenuFactoryMethod.js';
 
 export default class MenuMobileController {
-  constructor({ menuId, botaoId }) {
+  constructor({ menuId, openButtonId, closeButtonId }) {
     const menuElement = document.getElementById(menuId);
-    const botao = document.getElementById(botaoId);
+    const openButton = document.getElementById(openButtonId);
+    const closeButton = document.getElementById(closeButtonId);
 
-    if (!menuElement || !botao) {
+    if (!menuElement || !openButton || !closeButton) {
       throw new Error('Elementos de interface não encontrados');
     }
 
     const menuMobile = criarMenuMobile(menuElement);
 
-    botao.addEventListener('click', () => {
+    openButton.addEventListener('click', () => {
+      menuMobile.toggle();
+    });
+
+    closeButton.addEventListener('click', () => {
       menuMobile.toggle();
     });
   }

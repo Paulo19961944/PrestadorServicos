@@ -1,6 +1,6 @@
 import Menu from '../domain/Menu.js';
 import DisplayController from '../infrastructure/DisplayController.js';
-import ToggleMenuMobile from './ToggleMenuMobile.js';
+import ToggleMenuMobile from './ToogleMenuMobile.js';
 
 export default function criarMenuMobile(menuElement) {
   const menu = new Menu(menuElement);

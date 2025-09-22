@@ -1,9 +1,9 @@
 export default class ToggleMenuMobile {
   constructor(displayController) {
-    this.display = displayController;
+    this.displayController = displayController;
   }
 
   executar() {
-    this.display.toggle();
+    this.displayController.toggle();
   }
 }

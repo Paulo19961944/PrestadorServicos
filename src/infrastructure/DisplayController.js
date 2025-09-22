@@ -4,15 +4,14 @@ export default class DisplayController {
   }
 
   show() {
-    this.element.style.display = 'block';
+    this.element.classList.add('aberto');
   }
 
   hide() {
-    this.element.style.display = 'none';
+    this.element.classList.remove('aberto');
   }
 
   toggle() {
-    const current = window.getComputedStyle(this.element).display;
-    this.element.style.display = current === 'none' ? 'block' : 'none';
+    this.element.classList.toggle('aberto');
   }
 }
