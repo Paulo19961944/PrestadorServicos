@@ -151,6 +151,106 @@ button.call-to-action:hover {
     cursor: pointer;
 }
 
+.perfil-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: transparent; 
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  text-align: left;
+}
+
+.perfil-foto {
+  flex: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.perfil-foto img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid var(--primary-border-color);
+  background: #eee;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.perfil-foto img:hover {
+  transform: scale(1.05);
+}
+
+.perfil-info {
+  flex: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.perfil-info h2 {
+  text-align: left;
+  font-size: 2.25rem;
+  color: #222;
+  margin: 0 0 0.5rem 0;
+}
+
+.perfil-funcao {
+  font-size: 1.25rem;
+  color: var(--primary-link-color);
+  font-weight: 600;
+}
+
+.perfil-telefone{
+    font-size: 1.125rem;
+}
+
+.perfil-descricao {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-top: 0.5rem;
+}
+
+/* Botões alinhados com descrição */
+.perfil-actions {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+  max-width: 600px;
+}
+
+.perfil-btn {
+  flex: 1 1 140px; 
+  max-width: 160px;
+  height: 42px;
+  background: var(--bg-button);
+  color: var(--text-button);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.perfil-btn:hover {
+  background: #1769aa;
+  transform: translateY(-2px);
+}
+
+.perfil-btn-danger {
+  background: #e53935;
+}
+.perfil-btn-danger:hover {
+  background: #b71c1c;
+}
+
 footer {
     font-weight: bold;
     height: 160px;
@@ -243,4 +343,47 @@ footer {
     img.prestador-servico {
         width: 100%;
     }
+
+    .perfil-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .perfil-foto img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .perfil-info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .perfil-info h2 {
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
+    .perfil-descricao {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .perfil-actions {
+      flex-direction: column; /* Botões em coluna */
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      gap: 0.75rem; /* Espaço entre botões */
+      margin-top: 1.5rem; /* mantém distância da descrição */
+  }
+
+  .perfil-actions .perfil-btn {
+      flex: none; /* Remove o flex que estava causando altura gigante */
+      width: 100%; /* Ocupa largura do container */
+      max-width: 300px; /* Limite máximo */
+      height: 44px; /* Altura proporcional */
+  }
 }

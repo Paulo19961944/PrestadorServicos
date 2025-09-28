@@ -1,4 +1,4 @@
-export const pageData = [
+export const perfilData = [
   {
     imageSrc: 'public/images/Prestador-Serviço-1.jpg',
     imageAlt: 'Prestador de Serviço',

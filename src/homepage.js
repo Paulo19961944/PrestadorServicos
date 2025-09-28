@@ -1,9 +1,9 @@
-import { pageData } from "./page/pageData.js";
+import { homepageData } from "./page/homepageData.js";
 
 export default function renderSections() {
-  const main = document.querySelector('main');
+  const main = document.querySelector('#homepage');
   
-  pageData.forEach(section => {
+  homepageData.forEach(section => {
     const sectionContainer = document.createElement('section');
     sectionContainer.classList.add('container');
 
