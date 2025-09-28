@@ -33,12 +33,13 @@ paulo19961944/prestadorservicos/
 │   │   └── Menu.js
 │   ├── infrastructure/
 │   │   └── DisplayController.js
-│   └── interface/
-│       └── MenuMobileController.js
+│   | interface/
+│   |   ├── MenuMobileController.js
+|   ├── main.js
+|   └── App.js
 ├── styles/
 │   └── style.css
 ├── .gitignore
-├── App.js
 └── index.html
 ```
 
